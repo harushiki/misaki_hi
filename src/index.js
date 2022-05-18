@@ -10,7 +10,8 @@ client.once("ready", () => {
 });
 
 client.on("messageCreate", async message => {
-  if(message.content.toLowerCase().indexOf("hi") != -1){
+  if(message.author.bot) return
+  if(message.content.toLowerCase().indexOf("hi") != -1 && message.author.id == "949166612169228328"){
     message.reply("Hi Misaki!");
   }
 })
