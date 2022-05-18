@@ -57,4 +57,10 @@ client.on("interactionCreate", async interaction => {
   }
 });
 
+client.on("messageCreate", async message => {
+  if(message.content.toLowerCase().indexOf("hi") != -1){
+    message.reply("Hi misaki!");
+  }
+})
+
 client.login(token); // Login to the bot client via the defined "token" string.
